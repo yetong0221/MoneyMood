@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
+  --color-cream: #fff9f9;
+  --color-blush: #ffe8ea;
+  --color-rose: #ff8c94;
+  --color-rose-deep: #f06d7a;
+  --color-mint: #a8e6cf;
+  --color-mint-deep: #6ec8a5;
+  --color-lilac: #d1c4e9;
+  --color-lilac-deep: #b39ddb;
+  --color-peach: #ffe0b2;
+  --color-ink: #5a3f3f;
+  --color-muted: #b08989;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: #fff9f9;
+  color: #5a3f3f;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+input,
+textarea {
+  user-select: text;
+}
+
+.app-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.donut {
+  background: conic-gradient(#ff8c94 0 23%, #d1c4e9 23% 39%, #a8e6cf 39% 100%);
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-float {
+  animation: float-y 3.2s ease-in-out infinite;
+}
